@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #1f2430;
+  color: #e8eaf0;
+  font-size: 13px;
+  flex: 0 0 auto;
+}
+
+#toolbar .title {
+  font-weight: 600;
+  margin-right: 12px;
+}
+
+#toolbar .title em {
+  font-style: normal;
+  font-weight: 400;
+  color: #9aa3b5;
+  font-size: 12px;
+}
+
+#toolbar button {
+  background: #2e3547;
+  color: #e8eaf0;
+  border: 1px solid #454d63;
+  border-radius: 4px;
+  padding: 4px 12px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#toolbar button:hover:not(:disabled) {
+  background: #3a4358;
+}
+
+#toolbar button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+#toolbar .hint {
+  margin-left: auto;
+  color: #8b93a7;
+  font-size: 12px;
+}
+
+#viewport {
+  position: relative;
+  flex: 1 1 auto;
+  overflow: hidden;
+  background: #fff;
+}
+
+#scroller {
+  position: absolute;
+  inset: 0;
+  overflow: auto;
+}
+
+#sizer {
+  position: relative;
+}
+
+#grid, #overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.cell-editor {
+  position: absolute;
+  border: 2px solid #2563eb;
+  outline: none;
+  font-size: 12px;
+  padding: 0 5px;
+  font-family: inherit;
+  z-index: 10;
+}
+
+#status {
+  flex: 0 0 auto;
+  padding: 4px 12px;
+  background: #f4f5f8;
+  border-top: 1px solid #d3d6de;
+  color: #5a6070;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

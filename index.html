@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mega Grid - 百万单元格</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="toolbar">
+    <span class="title">Mega Grid <em>1000 x 1000 = 1,000,000 单元格</em></span>
+    <button id="btn-undo" disabled>撤销</button>
+    <button id="btn-redo" disabled>重做</button>
+    <button id="btn-stress">压力测试(1万条编辑)</button>
+    <button id="btn-clear">清空数据</button>
+    <span class="hint">双击/回车/直接输入编辑 · Ctrl+Z 撤销 · Ctrl+Shift+Z 重做 · Delete 清除</span>
+  </header>
+  <div id="viewport">
+    <canvas id="grid"></canvas>
+    <canvas id="overlay"></canvas>
+    <div id="scroller">
+      <div id="sizer"></div>
+    </div>
+  </div>
+  <footer id="status">初始化中...</footer>
+  <script src="js/store.js"></script>
+  <script src="js/provider.js"></script>
+  <script src="js/undo.js"></script>
+  <script src="js/renderer.js"></script>
+  <script src="js/editor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
